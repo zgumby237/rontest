@@ -1,0 +1,295 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDEV255_Group_1_Schedule_Builder</title>
+  <link rel="stylesheet" href="radioclub.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+  
+
+  <header>
+ 
+    <h1>Group 1 Final Project College Schedule Builder</h1>
+    <div class="details" >
+      <a href="ivy-learn.png"><img src="ivy-learn.png" height="100" width="200" alt="IvyLearnLogo" align="left" ></a>	
+      <p>____________________________________________________________</p>
+      </div>
+
+    </header>
+      <nav>	
+      <a href="index.html">Home</a>  &nbsp;
+      <a href="studentINFO.html">Student Information</a>  &nbsp;
+      <a href="courseCatalog.html">Course Catalog</a>  &nbsp;
+      <a href="Template.html">BlankBootstrap</a>  &nbsp;
+      </nav>
+      <h1 class="display-1"></h1>
+
+      
+    
+      <!-- lead text & alignment -->
+      <p class="lead text-center">This website is for course and class signup</p>
+     <!-- text decoration & font weight -->
+      <p class="text-decoration-underline" ,>Use the student Entry Page for course seletion</p>
+      <!-- text colours -->
+      <p class="text-danger">Check the Catolog page for course selection before final data entry</p>
+      
+    
+      <!-- bg colors -->
+      <p class="text-white bg-primary">Start data entry on Student Information after course selection from the catalog</p>
+      <p class="text-white bg-secondary">SDEV 255 Ivy Tech </p>
+      <p class="text-
+      
+      <article>
+        <h2>Create An Account</h2>
+        <form>
+           <fieldset class="text">
+              <label for="uname">Username</label>
+              <input type="text" id="uname" />
+              <p id="usernameError" class="errorMsg"></p>
+              <label for="pw1">Password</label>
+              <input type="password" id="pw1" />
+              <label for="pw2">Password (confirm)</label>
+              <input type="password" id="pw2" />
+              <p id="passwordError" class="errorMsg"></p>
+              <label for="email">Email Address</label>
+              <input type="email" id="emailbox" />
+              <p id="emailError" class="errorMsg"></p>
+           </fieldset>
+           <br>
+           <br>
+
+           
+           <input type="button" id="createBtn" value="Create Account" />
+        </form>
+        <br>
+        <br>
+
+
+
+      <p>Existing users enter password for entry into the Template page hint Admin</p>
+        <form>
+         <label for="pswd">Enter password for template access: </label>
+        <input type="password" id="pswd">
+         <input type="button" value="Submit" onclick="checkPswd();" />
+     </form>
+
+
+
+        <section id="profile">
+           <h3>Profile</h3>
+           <div id="usernameSection">
+              <h4>Username</h4>
+              <p id="profileUsername"></p>
+           </div>
+           <div id="emailSection">
+              <h4>Email address</h4>
+              <p id="profileEmail"></p>
+           </div>
+           
+        </section>
+     </article>
+
+<script>
+"use strict";
+
+// global variables
+var profile = {};
+var lodging = [];
+var objectString;
+var arrayString;
+
+// validate entered username
+function validateUsername() {
+   var unInput = document.getElementById("uname");
+   var errorDiv = document.getElementById("usernameError");
+   try {
+// replace with conditional expression
+//if (unInput.value.length <4) {
+	if (/.{4,}/.test(unInput.value) ===false) {
+	throw"Username must be at least 4 characters long";
+	}else if (/\W/.test(unInput.value) ===true) {
+		throw"Username must contain only letters and numbers";
+		}
+      // remove any username error styling and message
+      unInput.style.background = "";
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+      // copy valid username value to profile object
+      profile.username = unInput.value;
+      // copy profile.username value to profile section
+      document.getElementById("profileUsername").innerHTML = profile.username;
+      // make profile section and username section visible
+      document.getElementById("profile").style.display = "block";
+      document.getElementById("usernameSection").style.display = "block";
+   }
+   catch(msg) {
+      // display error message
+      errorDiv.style.display = "block";
+      errorDiv.innerHTML = msg;
+      // change input style
+      unInput.style.background = "rgb(255,233,233)";
+   }
+}
+
+// validate entered password
+function validatePassword() {
+   var pw1Input = document.getElementById("pw1");
+   var pw2Input = document.getElementById("pw2");
+   var errorDiv = document.getElementById("passwordError");
+   try {
+// replace with conditional expression
+//if (pw1Input.value.length <8) {
+	if (/.{8,}/.test(pw1Input.value) ===false) {
+	throw"Password must be at least 8 characters";
+	}else if (pw1Input.value.localeCompare(pw2Input.value) !==0) {
+		throw"Passwords must match";
+	}else if (/[a-zA-Z]/.test(pw1Input.value) ===false) { 
+		   throw"Password must contain at least one letter"; 
+		   }   else if (/\d/.test(pw1Input.value) ===false) { 
+		   throw"Password must contain at least one number"; 
+		   }   else if (/[!@#_]/.test(pw1Input.value) ===false) { 
+		   throw"Password must contain at least one of the following 		symbols: ! @ # _"; 
+		 }
+		
+		
+	
+      // remove any password error styling and message
+      pw1Input.style.background = "";
+      pw2Input.style.background = "";
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+      // copy valid password to profile object
+      profile.password = pw1Input.value;
+   }
+   catch(msg) {
+      // display error message
+      errorDiv.style.display = "block";
+      errorDiv.innerHTML = msg;
+      // change input style
+      pw1Input.style.background = "rgb(255,233,233)";
+      pw2Input.style.background = "rgb(255,233,233)";      
+   }
+}
+
+// validate entered email
+function validateEmail() {
+   var emailInput = document.getElementById("emailbox");
+   var errorDiv = document.getElementById("emailError");
+   var emailCheck =/^[_\w\-]+(\.[_\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,6})$/;
+   try {
+	   
+
+		  if (emailCheck.test(emailInput.value) ===false) {
+	throw"Please provide a valid email address";
+	}
+      // remove any email error styling and message
+      emailInput.style.background = "";
+      errorDiv.innerHTML = "";
+      errorDiv.style.display = "none";
+      // convert email address to lowercase
+// replace with code to convert email address to lowercase
+	emailInput.value = emailInput.value.toLowerCase();
+      // copy valid email value to profile object
+      profile.email = emailInput.value;
+      // copy profile.email value to profile section
+      document.getElementById("profileEmail").innerHTML = profile.email;
+      // make profile section and email section visible
+      document.getElementById("profile").style.display = "block";
+      document.getElementById("emailSection").style.display = "block";
+   }
+   catch(msg) {
+      // display error message
+      errorDiv.innerHTML = msg;
+      errorDiv.style.display = "block";
+      // change input style
+      emailInput.style.background = "rgb(255,233,233)";
+   }
+}
+
+// add lodging to profile
+
+
+
+ // convert form input to strings for submission 
+ function convertToString() { 
+    // convert lodging array to string 
+       arrayString = lodging.toString(); 
+	   
+	   // convert profile object to string
+	   objectString = JSON.stringify(profile);
+  }
+ 
+ 
+ 
+
+function createEventListeners() {
+   var unInput = document.getElementById("uname");
+   var pw2Input = document.getElementById("pw2");
+   var emailInput = document.getElementById("emailbox");
+   if (unInput.addEventListener) {
+      unInput.addEventListener("change", validateUsername, false); 
+      pw2Input.addEventListener("change", validatePassword, false); 
+      emailInput.addEventListener("change", validateEmail, false); 
+   } else if (unInput.attachEvent) {
+      unInput.attachEvent("onchange", validateUsername);
+      pw2Input.attachEvent("onchange", validatePassword);
+      emailInput.attachEvent("onchange", validateEmail);
+	var button =document.getElementById("createBtn"); 
+	if (button.addEventListener) { 
+	      button.addEventListener("click", convertToString, false); 
+	   }   else if (button.attachEvent) { 
+	      button.attachEvent("onclick", convertToString); 
+	 }  
+	  
+	  
+   }
+   
+   
+   }
+
+
+if (window.addEventListener) {
+   window.addEventListener("load", createEventListeners, false);
+} else if (window.attachEvent) {
+   window.attachEvent("onload", createEventListeners);
+}
+
+
+//for password check with submit button
+function checkPswd() {
+        var confirmPassword = "Admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="Template.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+
+
+
+
+</script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+  <footer>
+    Copyright &copy; Indianapolis IVYTECH SDEV 255<br>
+    E-mail ron: rcooper112@ivytech.edu
+   <h4>This document was last modified on: </h4>
+  </footer>
+  <script>
+  document.write(document.lastModified);
+  
+  
+  </script>
+
+
+</body>
+</html>

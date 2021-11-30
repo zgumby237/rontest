@@ -1,0 +1,129 @@
+body { background-color: #FCEBB6;
+					color:#cc3333;
+					font-family: Verdana;}
+h1       { background-color: #D2B48C; 
+           color: #000000; text-align: center;
+			line-height: 200%;}
+
+nav	     {text-align: left;font-weight: bold;}	     
+footer   { background-color: #D2B48C; 
+		color: #221811;
+		   font-size: .60em;
+		   font-style: italic;
+			text-align: center;	}					
+#wrapper { width: 80%;
+			margin-left: auto;
+margin-right: auto;}
+table	{margin: auto;
+		border: 1px;
+        border: 5px solid #000066;
+		width: 90%;
+		border-spacing: 0px;
+		
+}
+td, th {padding: 10px;}
+tr:nth-of-type(odd) { background-color: #D2B48E; 
+}
+.details {padding-left:20%;
+		padding-right:20%;
+		overflow: auto;
+		}
+form 	{padding: 2em;}
+label	{float: left; 
+		display: block; 
+		text-align: right; 
+		width: 8em; 
+		padding-right: 1em; }
+input,textarea	{display: block; 
+				margin-bottom: 1em;}
+#mysubmiit	{margin-left: 9.5em;}
+#herojobs 	{display: none;}	
+
+	
+#mobile {display: none;}
+#desktop {display: inline;}
+@media only screen and (max-width: 1024px) {
+	body{ margin: 0; background-image: none;}
+	#wrapper {width: auto; 
+				min-width: 0; 
+				 margin: 0;
+				padding: 0; 
+				box-shadow: none;
+				 }
+	header {border-bottom: 5px solid #FEF6C2; }
+	h1 {margin-top: 0;
+		margin-bottom: 1em; 
+		padding-top: 1em; 
+		padding-bottom:1em;
+		font-size: 2.5em;
+		}
+	nav {float: none; 
+		width: auto; 
+		padding-top: 0; 
+		margin: 10px; 
+		font-size: 1.3em; }
+	nav li {display: inline-block}
+	nav a {padding: 1em; 
+		width: 8em;
+		font-weight: bold;
+		border-style:none;}
+	nav ul {padding: 0;
+			margin: 0;
+			}
+	
+	main {margin:0; font-size: 90%;}
+}
+@media only screen and (max-width: 768px) {
+	h1	{
+		background-size: 128px;
+		font-size: 2em;
+		text-align: center;
+		padding: 0;
+	}
+	nav {margin: 0px;
+		 }
+	nav a {display: block;
+		padding: .2em; 
+		width: auto;
+		font-weight: bold;
+		border-bottom: 1px #FEF6C2;}
+	nav li {display: block}
+	main {padding-top: 1px;}
+	h2	{padding-top: .5em;
+		padding-right:0;
+		padding-bottom:0;
+		padding-left: .5em;
+		margin-right: 0.5em;}
+	.details {padding-right:0;}
+	
+	.floatleft {padding-left: 0.5em;
+				padding-right: 0.5em;}
+	#mobile {display: inline;}
+	#desktop {display: none;}
+}
+figure {   float: right;
+		   margin: 10px;
+           padding: 5px;
+		   background-color: #FFF;
+		   border: 1px solid #CCC;
+		   box-shadow: 5px 5px 5px #828282;
+		   transform: rotate(7deg);
+}
+figcaption { text-align: center;
+		   font-size: .8em;
+		   font-style: italic;
+}
+nav 	{position: relative;}
+nav ul ul { position: absolute;
+         background-color: #99cc99;
+    	 padding: 0;
+         text-align: left;
+		 display: none; 
+}
+nav ul ul li { border: 10px solid  #00005D;
+ 		 display: block;
+         width: 8em;
+         padding-left: 1em;
+         margin-left: 0; 
+}
+nav li:hover ul {display: block;}

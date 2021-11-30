@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information</title>
+  <link rel="stylesheet" href="radioclub.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <h1>Group 1 Final Project College Student Information</h1>
+    <div class="details" >
+      <a href="ivy-learn.png"><img src="ivy-learn.png" height="100" width="200" alt="IvyLearnLogo" class="floatleft"></a>	
+      <p>____________________________________________________________</p>
+      </div>
+
+    </header>
+      <nav>	
+      <a href="index.html">Home</a>  &nbsp;
+      <a href="studentINFO.html">Student Information</a>  &nbsp;
+      <a href="courseCatalog.html">Course Catalog</a>  &nbsp;
+      
+      <a href="Template.html">BlankBootstrap</a>  &nbsp;
+      </nav>
+
+    <table >
+    <caption>Student table </caption>
+    <tr>
+    <th>Student ID</th>
+    <th>Name</th>
+    <th>Call</th>
+    <th>Email</th>
+    <th>Major</th>
+    <th>GPA</th>
+    <th>Picture Link</th>
+    <th>IDnumber</th>
+    <tr>
+      <td>12345</td>
+      <td>Andrew Jorgenson </td>
+      <td>Baern</td>
+      <td>andrew</td>
+    </tr>
+    <tr>
+      <td>5678</td>
+      <td>Prashanti Adabala </td>
+      <td>Pra</td>
+      <td>Pr</td>
+    </tr>
+    <tr>
+      <td>54321</td>
+      <td>Brandi K Austin</td>
+      <td>BK</td>
+      <td>s</td>
+    <tr>
+      <td>000000</td>
+      <td>Ronald Paul Cooper</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>img src="ivy-learn.png"</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <td>98765</td>
+      <td>Daniel Luke Duke</td>
+      <td>D</td>
+      <td>L</td>
+    </tr>
+    
+  </table>
+
+  <form method="get">
+    <label for="myDate">Choose a Date</label>
+    <input type="date" name="myDate" id="myDate"> 
+     <br><br>
+    <input type="submit" value="Send"> <input type="reset">
+    </form>
+
+  <br>
+    <article>
+    <h2>Create An Account</h2>
+    <form action="results.htm" >
+       <fieldset class="text">
+          <label for="uname">Student ID</label>
+          <input type="text" id="uname" required="required"/>
+          <p id="usernameError" class="errorMsg"></p>
+          <label for="uname">Student Name</label>
+          <input type="text" id="uname" required="required"/>
+          <p id="usernameError" class="errorMsg"></p>
+          <label for="uname">Class ID</label>
+          <input type="text" id="uname" required="required"/>
+          <p id="usernameError" class="errorMsg"></p>
+          <label for="uname">Class Name</label>
+          <input type="text" id="uname" required="required"/>
+          <p id="usernameError" class="errorMsg"></p>
+          <label for="pw1">Password</label>
+          <input type="password" id="pw1" />
+          <label for="pw2">Password (confirm)</label>
+          <input type="password" id="pw2" />
+          <p id="passwordError" class="errorMsg"></p>
+          <label for="email">Email Address</label>
+          <input type="email" id="emailbox" />
+          <p id="emailError" class="errorMsg"></p>
+       </fieldset>
+        <input type="button" id="createBtn" value="Create Account" />
+    </form >
+    
+ </article>
+ <footer><p>Indianapolis</p></footer>
+ <script src="MO5.js"></script
+
+
+<br>
+
+<footer>
+  Copyright &copy; Indianapolis Radio Club<br>
+  E-mail ron: rcooper112@ivytech.edu
+ <h3>This document was last modified on: </h3>
+</footer>
+<script>
+  document.write(document.lastModified);
+  
+  function checkPswd() {
+          var confirmPassword = "admin";
+          var password = document.getElementById("pswd").value;
+          if (password == confirmPassword) {
+               window.location="Project/index.html";
+          }
+          else{
+              alert("Passwords do not match.");
+          }
+      }
+  </script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

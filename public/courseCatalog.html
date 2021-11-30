@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Catalog</title>
+  <link rel="stylesheet" href="radioclub.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+
+
+
+    <h1>Course courseCatalog</h1>
+    <div class="details" >
+      <a href="ivy-learn.png"><img src="ivy-learn.png" height="100" width="200" alt="IvyLearnLogo" class="floatleft"></a>	
+      <p>____________________________________________________________</p>
+      </div>
+
+    </header>
+      <nav>	
+      <a href="index.html">Home</a>  &nbsp;
+      <a href="studentINFO.html">Student Information</a>  &nbsp;
+      <a href="courseCatalog.html">Course Catalog</a>  &nbsp;
+	  <a href="Template.html">BlankBootstrap</a>  &nbsp;
+      </nav>
+
+<!-- contact form -->
+  <!-- form-control, form-label, form-select, input-group, input-group-text -->
+  <section id="contact">
+    <div class="container-lg">
+      
+      <div class="text-center">
+        <h2>Find Courses</h2>
+        <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <form>
+            <label for="container" class="form-label">Enter your CRN:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="text" id="CRN" class="form-control" placeholder="e.g. 12345" />
+            </div>
+
+            
+
+            <label for="courses" class="form-label">What is your Major?</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>SDEV</option>
+                <option value="content">COBAL</option>
+                <option value="other">FORTRAN</option>
+              </select>
+            </div>
+
+            <label for="courses" class="form-label">What is the course you want?</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>LOVE</option>
+                <option value="content">Motivation</option>
+                <option value="other">Wisdom</option>
+                <option value="other">Humor</option>
+              </select>
+            </div>
+
+            <label for="courses" class="form-label">What is your campus?</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>Indianapoliis</option>
+                <option value="content">Bloomington</option>
+                <option value="other">Seymour</option>
+              </select>
+            </div>
+
+            
+            <div class="mb-4 mt-5 form-floating">
+              <textarea class="form-control" id="query" style="height: 140px" placeholder="query"></textarea>
+              <label for="query">Your query...</label>
+            </div>
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+      <title>Available Courses</title>
+	<script src="quote.js"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		#quotes {
+			background-color: #F1EAFF;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	</style>
+	<body>
+		<h1>Courses</h1>
+
+		<p>
+			<label for="topicSelection">Select a topic:</label>
+			<select id="topicSelection">
+            <option>Choose one</option>
+				<option>love</option>
+				<option>motivational</option>
+				<option>wisdom</option>
+				<option>humor</option>
+			</select>
+		</p>
+		<p>
+			<label for="countSelection">How many courses?</label>
+			<select id="countSelection">
+				<option>1</option>
+				<option>2</option>
+				<option selected>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</p>
+		<p>
+		   <button id="fetchQuotesBtn">Fetch Courses</button>
+		</p>
+		<div id="quotes">
+		</div>
+	</body>
+
+    
+ <footer><p>Indianapolis</p></footer>
+ <script src="MO5.js"></script
+
+
+<br>
+
+<footer>
+  Copyright &copy; Indianapolis Radio Club<br>
+  E-mail ron: rcooper112@ivytech.edu
+ <h3>This document was last modified on: </h3>
+</footer>
+<script>
+  document.write(document.lastModified);
+  
+  function checkPswd() {
+          var confirmPassword = "admin";
+          var password = document.getElementById("pswd").value;
+          if (password == confirmPassword) {
+               window.location="Project/index.html";
+          }
+          else{
+              alert("Passwords do not match.");
+          }
+      }
+  </script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
