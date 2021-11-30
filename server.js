@@ -8,7 +8,3 @@ app.use(express.static("public"));
 
 app.listen(process.env.PORT || 3000);
 
-app.get('/', (req, res) => {
-   
-    res.render('public/index', { title: 'Home'});
-  });
